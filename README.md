@@ -9,19 +9,7 @@ PYTHON
 
 EL CODIGO UTILIZADO PARA ESTE PROYECTO EN VISUAL STUDIO CODE EN LA PARTE DE PYTHON ES:
 
-import pyaudio #libreria 
-import speech_recognition as sr #otra libreria el cual la apodamos sr para su uso 
-reconocedor= sr.Recognizer() # llamo a una funcion de speech... que contiene: metodos para calibrar ruido, capturar audio, audio a texto
 
-
-
-with sr.Microphone(device_index=2) as mic: #abrimos el microfono y le damos el nombre de mic que se usara debajo de todas las lineas
-    reconocedor.adjust_for_ambient_noise(mic,duration=0.2)# 0.2 segundos para reconocer la vos del ruido
-    audio= reconocedor.listen(mic)
-    texto = reconocedor.recognize_google(audio, language='es-ES')
-    texto= texto.lower()
-    print("habla")
-    print("estas son tus palabras: ",texto)
 
 EN ESTA PARTE VA LA ESTRUCTURA DEL PROYECTO
 SRC
